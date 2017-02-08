@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: bool
         """
 
-        if p == '.*' or s == p:
+        if s == p:
             return True
 
         i, j = 0, 0
@@ -31,6 +31,8 @@ class Solution(object):
 
         if i == len(s) and j == len(p):
             return True
+        elif i == len(s) and j + 2 == len(p) and p[j + 1] == '*':
+            return True
         else:
             return False
 
@@ -41,4 +43,5 @@ class Solution(object):
             return s == p
 
 if __name__ == "__main__":
-    print Solution().isMatch("aaa", "a.a")
+    pass
+    # print Solution().isMatch("a", "ab*")

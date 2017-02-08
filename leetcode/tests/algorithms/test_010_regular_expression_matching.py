@@ -1,4 +1,4 @@
-from leetcode.algorithms.010_regular_expression_matching import Solution
+from leetcode.algorithms.problem_010_regular_expression_matching import Solution
 
 def test_01():
     assert Solution().isMatch("aa","a") == False
@@ -44,3 +44,6 @@ def test_14():
 
 def test_14():
     assert Solution().isMatch("a", "ab*") == True
+
+def test_15():
+    assert Solution().isMatch("", "c*c*") == True
