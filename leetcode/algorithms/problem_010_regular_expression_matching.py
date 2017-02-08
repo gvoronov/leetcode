@@ -10,7 +10,7 @@ class Solution(object):
             return True
 
         i, j = 0, 0
-        while i < len(s) and j < len(p):
+        while j < len(p):
             if j + 1 < len(p) and p[j + 1] == '*':
                 if p[j] == '.':
                     num_pattern = len(s) - j + 1
@@ -23,15 +23,13 @@ class Solution(object):
 
                 return False
             else:
-                if self.char_match(s[i], p[j]):
+                if i < len(s) and self.char_match(s[i], p[j]):
                     i += 1
                     j += 1
                 else:
                     return False
 
         if i == len(s) and j == len(p):
-            return True
-        elif i == len(s) and j + 2 == len(p) and p[j + 1] == '*':
             return True
         else:
             return False
@@ -44,4 +42,3 @@ class Solution(object):
 
 if __name__ == "__main__":
     pass
-    # print Solution().isMatch("a", "ab*")
