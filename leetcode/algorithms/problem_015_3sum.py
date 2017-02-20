@@ -20,6 +20,7 @@ class Solution(object):
                     c = nums[k]
                     if a + b + c == 0:
                          three_sums_set.add((a, b, c))
+                         break
                     elif c > -(a + b):
                         break
 
