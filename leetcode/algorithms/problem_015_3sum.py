@@ -18,8 +18,6 @@ class Solution(object):
         while i != j:
             a, b = nums[i], nums[j]
 
-
-
         return [list(t) for t in three_sums_set]
 
     def threeSum_slow_for_testing(self, nums):
