@@ -15,8 +15,25 @@ class Solution(object):
 
         three_sums_set = set()
         i, j = 0, len(nums)
-        while i != j:
-            a, b = nums[i], nums[j]
+        a, c = nums[i], nums[j]
+        while i != j and a * c < 0:
+
+            b = -(a + c)
+            if b < a:
+                j -= 1
+                c = nums[j]
+            elif b == a:
+            elif b == c:
+            elif b > c:
+                i += 1
+                a = nums[i]
+            else:
+                if b in nums_dict:
+                    three_sums_set.add((a, b, c))
+                else:
+
+
+
 
         return [list(t) for t in three_sums_set]
 
