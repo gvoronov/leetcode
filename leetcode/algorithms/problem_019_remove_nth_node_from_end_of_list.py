@@ -1,8 +1,8 @@
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 class Solution(object):
     def removeNthFromEnd(self, head, n):
@@ -11,3 +11,6 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
+
+if __name__ == "__main__":
+    pass
